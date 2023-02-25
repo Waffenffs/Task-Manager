@@ -1,0 +1,343 @@
+.signinForm {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+form {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.formContainer {
+    padding: 30px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.imageContainer {
+    width: 60%;
+    padding: 5px;
+}
+
+
+.input-signin {
+    font-size: 1.5em;
+    padding: 10px;
+    border-radius: 10px;
+    border: solid thin;
+    width: 100%;
+}
+
+.input-signin:focus {
+    outline: none;
+}
+
+.signin-picture {
+    width: 100%;
+    height: 100vh;
+    border-radius: 10px;
+}
+
+.form-button {
+    align-self: center;
+    width: 100%;
+    margin-top: 20px;
+    font-size: 1.5em;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #18181c;
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.form-button:hover {
+    background-color: #5e5d62;
+}
+
+.inputTitle {
+    font-weight: 700;
+    font-size: 1em;
+}
+
+.paraContainer {
+    width: 50vh;
+    line-height: 25px;
+    margin: 0;
+}
+
+.majorTitle {
+    font-size: 2.5em;
+}
+
+.para {
+    font-weight: 400;
+    font-size: 1.2em;
+}
+
+.dashboardContainer {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+}
+
+.leftside {
+    position: fixed;
+    left: 0px;
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    height: 100%;
+    background-color: #2c2c37;
+    color: white;
+    border-right: solid thin white;
+}
+
+.upperSide {
+    padding: 20px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.addTaskButton {
+    background: none;
+    border: none;
+    color: white;
+    width: 100%;
+    font-size: 1.5em;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.addTaskButton:hover {
+    filter: brightness(80%)
+}
+
+.addTaskContainer {
+    background-color: #645fc5;
+    border-radius: 10px;
+    width: 25vh;
+}
+
+.contentContainer {
+    position: relative;
+    margin-left: 48vh;
+    width: 100%;
+    background-color: #2c2c37;
+}
+
+.logoIconContainer {
+    display: flex;
+    justify-content: center;
+    font-size: 5em;
+    margin-top: 30px;
+}
+
+.userProfile {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 10px;
+    margin-top: 30px;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+.userEmail {
+    font-weight: 400;
+    font-size: 1.2em;
+}
+
+.userIcon {
+    font-size: 2em;
+}
+
+.bottomNav {
+    margin-top: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 10px;
+}
+
+.logoutButtonContainer > button {
+    background: none;
+    border: none;
+    color: white;
+    width: 100%;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 1.5em;
+}
+
+.logoutButtonContainer {
+    background-color: #645fc5;
+    padding: 5px;
+    border-radius: 10px;
+    width: 50vh;
+    margin: 30px;
+    transition: 0.4s;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.logoutButtonContainer:hover {
+    filter: brightness(80%);
+}
+
+main {
+    width: 100%;
+    background-color:#24242f;
+    height: 100vh;
+}
+
+.columns {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    padding: 30px;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+.title {
+    color: white;
+    font-size: 1.5em;
+    font-weight: 700;
+}
+
+span {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.ui {
+    display: flex;
+    position: fixed;
+    left: 30%;
+    transform: translate(50%, 0);
+}
+
+.uiForm {
+    background-color: #2c2c37;
+    padding: 20px;
+    border-radius: 20px;
+    margin-top: 5vh;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    color: white;
+}
+
+.textarea {
+    resize: none;
+    font-size: 1.2em;
+}
+
+.textarea:focus {
+    outline: none;
+}
+
+.uiButton {
+    background: none;
+    border: none;
+    width: 100%;
+    font-size: 1.2em;
+    color: white;
+    cursor: pointer;
+}
+
+.uiButtonContainer {
+    background-color: #645fc5;
+    border-radius: 20px;
+    padding: 5px 0;
+    margin-top: 30px;
+}
+
+.uiInput {
+    width: 100%;
+    font-size: 1.2em;
+}
+
+.uiInput:focus {
+    outline: none;
+}
+
+.xContainer {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 2em;
+}
+
+.closeButton {
+    cursor: pointer;
+    color: white;
+}
+
+.todoCard {
+    background-color: #2b2b36;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 15px;
+    margin-top: 10px;
+    width: 40vh;
+    max-width: 45vh;
+    height: 30vh;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.todoCardTitle {
+    font-weight: 700;
+    color: white;
+    font-size: 1.7em;
+}
+
+.todoCardDescription {
+    font-weight: 400;
+    font-size: 0.9em;
+}
+
+.checkboxContainer {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.activeCheckbox {
+    background-color: #59c0df;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.inactiveCheckbox {
+    background-color: #8273d8;
+    border-radius: 10px;
+    padding: 5px;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.completedCheckbox {
+    background-color: #7cccb2;
+    border-radius: 10px;
+    padding: 5px;
+    cursor: pointer;
+    font-weight: 700;
+}
