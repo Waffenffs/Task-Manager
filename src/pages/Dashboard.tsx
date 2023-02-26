@@ -12,24 +12,6 @@ import {MdModeEdit} from 'react-icons/md'
 import '../App.css'
 
 export default function Dashboard(props: any){
-    /* 
-        #############
-        #   TO-DO   #
-        #############
-
-        1. Create Dashboard
-            - Implement CRUD capabilities with todos (Create, Update, Delete, Read)
-                - Fetch data from database (user/todos) in first-render
-                - Update database (user/todos)
-            - Light/dark mode implementations
-        2. Add animations
-            - Use Framer Motion
-
-        SHORT TODO:
-        1. Add the option to delete/edit todos
-            - Update database in delete/edit events
-    */
-
     const navigate = useNavigate()
 
     interface UserObject {
