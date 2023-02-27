@@ -2,13 +2,15 @@
     display: flex;
     flex-direction: row;
     width: 100%;
+    background-color: #8273d8;
 }
 
 form {
-    width: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
+    height: 100vh;
 }
 
 .formContainer {
@@ -18,6 +20,8 @@ form {
     flex-direction: column;
     gap: 20px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    background-color: #24242f;
+    color: white;
 }
 
 .imageContainer {
@@ -52,7 +56,7 @@ form {
     border: none;
     padding: 10px;
     border-radius: 10px;
-    background-color: #18181c;
+    background-color: #8273d8;
     color: white;
     font-weight: 700;
     cursor: pointer;
@@ -152,6 +156,10 @@ form {
     margin-top: 30px;
     margin-right: 20px;
     margin-left: 20px;
+    border: solid thin #8273d8;
+    padding: 0 10px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .userEmail {
@@ -348,15 +356,44 @@ span {
     flex-direction: row;
     gap: 10px;
     font-size: 1.5em;
+    align-items: center;
 }
 
 .deleteToDo {
     color: crimson;
     cursor: pointer;
+    font-size: 1.5em;
+    transition: 0.3s;
+}
+
+.deleteToDo:hover {
+    filter: brightness(80%)
 }
 
 .editToDo {
     color: greenyellow;
     cursor: pointer;
+    font-size: 1.3em;
+    transition: 0.3s;
 }
 
+.editToDo:hover {
+    filter: brightness(60%);
+}
+
+.signinButtonContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.signup {
+    display: flex;
+    gap: 5px;
+}
+
+.signup-text {
+    color: #59c0df;
+    font-weight: 700;
+    cursor: pointer;
+}

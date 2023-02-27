@@ -3,6 +3,7 @@ import { firebaseConfig } from './firebaseConfig'
 import { initializeApp } from 'firebase/app'
 import { Routes, Route, useNavigate } from 'react-router-dom'
 import Signin from './pages/Signin'
+import Register from './pages/Register'
 import Dashboard from './pages/Dashboard'
 import { getAuth, signInWithEmailAndPassword, onAuthStateChanged } from 'firebase/auth'
 import { useState, useEffect, Fragment } from 'react'
@@ -57,6 +58,7 @@ export default function App(){
     <Fragment>
       <Routes>
         <Route path='/' element={ <Signin auth={auth} db={db} /> } />
+        <Route path='/register' element={ <Register auth={auth} /> }/>
         <Route path='/dashboard' element={ <Dashboard user={thisUser} auth={auth} db={db} /> }/>
       </Routes>
     </Fragment>

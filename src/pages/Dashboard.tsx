@@ -58,6 +58,7 @@ export default function Dashboard(props: any){
     const [taskStatus, setTaskStatus] = useState<status>('active')
     const [edit, setEdit] = useState<boolean>(false)
     const [editDetails, setEditDetails] = useState<ToDo>({})
+    const [hideEdit, setHideEdit] = useState(false)
 
     // set userObject to props.user in initialization
     // get todos during initialization
@@ -109,7 +110,7 @@ export default function Dashboard(props: any){
                 <section className='todoCard'>
                     <div className="optionContainer">
                         <TiDelete className='deleteToDo' onClick={() => handleDeleteTodo(todo)}/>
-                        <MdModeEdit className='editToDo' onClick={() => handleEdit(todo)} />
+                        {!hideEdit && <MdModeEdit className='editToDo' onClick={() => handleEdit(todo)} />}
                     </div>
                     <h1 className='todoCardTitle'>{todo.todo_title}</h1>
                     <p className='todoCardDescription'>{todo.description}</p>
@@ -125,7 +126,10 @@ export default function Dashboard(props: any){
                 <section className='todoCard'>
                     <div className="optionContainer">
                         <TiDelete className='deleteToDo' onClick={() => handleDeleteTodo(todo)}/>
-                        <MdModeEdit className='editToDo' onClick={() => handleEdit(todo)}/>
+                        {!hideEdit && <MdModeEdit className='editToDo' onClick={() => {
+                            handleEdit(todo)
+                            setHideEdit(true)
+                        }} />}
                     </div>
                     <h1 className='todoCardTitle'>{todo.todo_title}</h1>
                     <p className='todoCardDescription'>{todo.description}</p>
@@ -141,7 +145,7 @@ export default function Dashboard(props: any){
                 <section className='todoCard'>
                     <div className="optionContainer">
                         <TiDelete className='deleteToDo' onClick={() => handleDeleteTodo(todo)}/>
-                        <MdModeEdit className='editToDo' onClick={() => handleEdit(todo)} />
+                        {!hideEdit && <MdModeEdit className='editToDo' onClick={() => handleEdit(todo)} />}
                     </div>
                     <h1 className='todoCardTitle'>{todo.todo_title}</h1>
                     <p className='todoCardDescription'>{todo.description}</p>
@@ -206,6 +210,7 @@ export default function Dashboard(props: any){
         })
 
         setUserTodos(filteredUserTodos)
+        setHideEdit(false)
 
         // update database where todo.id matches with todooject.id
         let documentId = ''
@@ -308,6 +313,7 @@ export default function Dashboard(props: any){
                                     <div className="xContainer">
                                         <AiOutlineCloseCircle className='closeButton' onClick={() => {
                                             setEdit(false)
+                                            setHideEdit(false)
                                         }}/>
                                     </div>
                                     <div className="uiTitle">

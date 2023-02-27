@@ -3,6 +3,7 @@ import { signInWithEmailAndPassword } from 'firebase/auth'
 import { useNavigate } from 'react-router-dom'
 import { setDoc, doc } from 'firebase/firestore'
 import '../App.css'
+import {Link} from 'react-router-dom'
 
 export default function Signin(props: any){
     interface ToDo { 
@@ -47,9 +48,6 @@ export default function Signin(props: any){
     
     return(
         <div className="signinForm">
-            <div className="imageContainer">
-                <img src="/foggy-forest-background.jpg" alt="signin-picture" className='signin-picture'/>
-            </div>
             <form onSubmit={handleSubmit}>
                 <div className="formContainer">
                     <div className="textContainer">
@@ -66,7 +64,15 @@ export default function Signin(props: any){
                         <h1 className='inputTitle'>Password *</h1>
                         <input type="password" placeholder='Your password here' value={password} onChange={((e) => setPassword(e.target.value))} className='input-signin'/>
                     </div>
-                    <button className='form-button'>Sign in</button>
+                    <div className="signinButtonContainer">
+                        <button className='form-button'>Sign in</button>
+                        <div className="signup">
+                            Don't have an account?
+                            <Link to="/register" style={{ textDecoration: 'none'}}>
+                                <span className='signup-text'>Sign up!</span>
+                            </Link> 
+                        </div>
+                    </div>
                 </div>
             </form>
         </div>
