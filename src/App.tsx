@@ -19,20 +19,6 @@ const auth = getAuth(app)
 const db = getFirestore(app)
 
 export default function App(){
-  /* 
-      #############
-      #   TO-DO   #
-      #############
-
-      1. Create Dashboard
-          - Implement CRUD capabilities with todos (Create, Update, Delete, Read)
-              - Fetch data from database (user/todos) in first-render
-              - Update database (user/todos)
-          - Light/dark mode implementations
-      2. Add animations
-          - Use Framer Motion
-  */
-
   const [thisUser, setThisUser] = useState({})
   const navigate = useNavigate()
 
