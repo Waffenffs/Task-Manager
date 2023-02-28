@@ -1,3 +1,5 @@
+
+
 .signinForm {
     display: flex;
     flex-direction: row;
@@ -396,4 +398,65 @@ span {
     color: #59c0df;
     font-weight: 700;
     cursor: pointer;
+}
+
+/* breakpoints */
+@media screen and (max-width: 400px){
+    .majorTitle {
+        font-size: 1.5em;
+    }    
+
+    .para {
+        font-size: 1em;
+    }
+
+    .inputTitle {
+        font-size: 0.9em;
+    }
+
+    .inputContainer {
+        width: 80vw;
+    }
+
+    .input-signin {
+        font-size: 1em;
+    }
+
+    .form-button {
+        font-size: 1em;
+    }
+
+    .signup {
+        font-size: 0.8em;
+    }
+
+    .signinForm {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100vw;
+        height: 100vh;
+    }
+
+    .formContainer {
+        padding: 2vh;
+    }
+}
+
+@media screen and (max-width: 325px) {
+    .formContainer {
+        padding: 1.5vh;
+        
+    }
+
+    .majorTitle {
+        font-size: 1.1em;
+    }
+
+    .para {
+        font-size: 0.9
+    }
+
+    .form-button {
+        font-size: 0.9em;
+    }
 }
